@@ -1,0 +1,7 @@
+
+- CastError: Cast to ObjectId failed for value "{ id: '5f3780eebd29092dc5572481' }" at path "_id" for model "Cliente"
+Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+
+Solución: usar la funcion ObjectID() del modulo mongodb
+import { ObjectID } from 'mongodb';
+const client = await Cliente.findOne({"_id": ObjectID(id)});
