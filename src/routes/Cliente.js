@@ -2,7 +2,7 @@
 import { Router } from 'express';
 const router = Router();
 
-import { getClients, getOneClient } from './../controllers/client.controller';
+import { getClients, getOneClient, createClient } from './../controllers/client.controller';
 
 // ruta que agrega el registro de un cliente con POST
 router.get('/', getClients);
@@ -10,8 +10,8 @@ router.get('/', getClients);
 // ruta para obtener todos los clientes con GET
 router.get('/:id', getOneClient);
 
-// // ruta que extrae un cliente especifico
-// router.post('/', createClient);
+// ruta que extrae un cliente especifico
+router.post('/', createClient);
 
 // // ruta que elimina un cliente
 // router.delete(':id', deleteOneClient);

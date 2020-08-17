@@ -11,8 +11,10 @@ app.use(json());
 
 // importing the routes
 import Cliente from './routes/Cliente';
+import Empleado from './routes/Empleado';
 
 // routes 
 app.use('/api/clientes', Cliente);
+app.use('/api/empleados', Empleado);
 
 export default app;
