@@ -2,7 +2,7 @@
 import { Router } from 'express';
 const router = Router();
 
-import { getClients, getOneClient, createClient } from './../controllers/client.controller';
+import { getClients, getOneClient, createClient, deleteOneClient, updateClient } from './../controllers/client.controller';
 
 // ruta que agrega el registro de un cliente con POST
 router.get('/', getClients);
@@ -14,9 +14,9 @@ router.get('/:id', getOneClient);
 router.post('/', createClient);
 
 // // ruta que elimina un cliente
-// router.delete(':id', deleteOneClient);
+router.delete('/:id', deleteOneClient);
 
 // // ruta que actualiza un cliente
-// router.put('::id', updateClient);
+router.put('/:id', updateClient);
 
 export default router;

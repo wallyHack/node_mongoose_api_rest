@@ -1,6 +1,5 @@
 
 const { Schema, model } = require('mongoose');
-const { Double } = require('mongodb');
 
 const electronicoSchema = new Schema({
     nombre: {

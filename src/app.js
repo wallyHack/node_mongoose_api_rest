@@ -12,9 +12,11 @@ app.use(json());
 // importing the routes
 import Cliente from './routes/Cliente';
 import Empleado from './routes/Empleado';
+import Electronico from './routes/Electronico';
 
 // routes 
 app.use('/api/clientes', Cliente);
 app.use('/api/empleados', Empleado);
+app.use('/api/electronicos', Electronico);
 
 export default app;
